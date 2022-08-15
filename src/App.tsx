@@ -4,34 +4,12 @@ import "./App.css";
 import { Button } from "antd"
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const btnClick = (number: number): void  => {
     console.log('测试', number);
   }
   return (
     <div className="App">
       <Button type="primary" onClick={btnClick.bind(null, 123)}>Antd</Button>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   );
 }
