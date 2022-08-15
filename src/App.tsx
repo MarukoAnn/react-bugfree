@@ -1,12 +1,17 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { Button } from "antd"
 
 function App() {
   const [count, setCount] = useState(0);
 
+  const btnClick = (number: number): void  => {
+    console.log('测试', number);
+  }
   return (
     <div className="App">
+      <Button type="primary" onClick={btnClick.bind(null, 123)}>Antd</Button>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
