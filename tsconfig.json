@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./", //解析非相对模块的基础地址, 默认是当前目录
     "paths": { // 路劲映射， 相当于baseUrl
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],

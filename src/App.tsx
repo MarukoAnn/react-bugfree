@@ -1,15 +1,16 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import { Button } from "antd"
+import ViewRouter from "./router/index";
+import { unstable_HistoryRouter as Router } from "react-router-dom";
+import { customHistory } from "@/uitls/history";
 
 function App() {
-  const btnClick = (number: number): void  => {
-    console.log('测试', number);
-  }
   return (
     <div className="App">
-      <Button type="primary" onClick={btnClick.bind(null, 123)}>Antd</Button>
+      <Router history={customHistory}>
+        <ViewRouter />
+      </Router>
     </div>
   );
 }
