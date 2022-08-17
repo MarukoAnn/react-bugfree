@@ -14,7 +14,6 @@ const routers: router[] = [
         path: '/test',
         name: 'test',
         component: '',
-        redirect: '/login'
     },
     {
         path: '/layout',

@@ -16,9 +16,9 @@ const RouterView = (props: { route: any }) => {
         {route.map((item: any, index: number) => {
           return item.component ? (
             <Route key={index} path={item.path} element={<item.component />}>
-              {item?.children ? RouterList(item.children): null}
+              {item?.children ? RouterList(item.children): null }
             </Route>
-          ) : null;
+          ) : <Route  key={index}  path={item.path} element={<Redirect to={item.redirect} />}></Route> // 配置路由重定向
         })}
       </Fragment>
     );

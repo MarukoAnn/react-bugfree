@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.6
   '@vitejs/plugin-react': ^2.0.1
   antd: ^4.22.5
+  babel-preset-mobx: ^2.0.0
   history: '5'
   i18next: ^21.9.0
   i18next-browser-languagedetector: ^6.1.5
@@ -39,6 +40,7 @@ devDependencies:
   '@types/react': registry.npmmirror.com/@types/react/18.0.17
   '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.0.6
   '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/2.0.1_vite@3.0.8
+  babel-preset-mobx: registry.npmmirror.com/babel-preset-mobx/2.0.0
   typescript: registry.npmmirror.com/typescript/4.7.4
   vite: registry.npmmirror.com/vite/3.0.8
 
@@ -180,6 +182,25 @@ packages:
       semver: registry.npmmirror.com/semver/6.3.0
     dev: true
 
+  registry.npmmirror.com/@babel/helper-create-class-features-plugin/7.18.9:
+    resolution: {integrity: sha512-WvypNAYaVh23QcjpMR24CwZY2Nz6hqdOcFdPbNpV56hL5H6KiFheO7Xm1aPdlLQ7d5emYZX7VZwPp9x3z+2opw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.18.9.tgz}
+    name: '@babel/helper-create-class-features-plugin'
+    version: 7.18.9
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/helper-annotate-as-pure': registry.npmmirror.com/@babel/helper-annotate-as-pure/7.18.6
+      '@babel/helper-environment-visitor': registry.npmmirror.com/@babel/helper-environment-visitor/7.18.9
+      '@babel/helper-function-name': registry.npmmirror.com/@babel/helper-function-name/7.18.9
+      '@babel/helper-member-expression-to-functions': registry.npmmirror.com/@babel/helper-member-expression-to-functions/7.18.9
+      '@babel/helper-optimise-call-expression': registry.npmmirror.com/@babel/helper-optimise-call-expression/7.18.6
+      '@babel/helper-replace-supers': registry.npmmirror.com/@babel/helper-replace-supers/7.18.9
+      '@babel/helper-split-export-declaration': registry.npmmirror.com/@babel/helper-split-export-declaration/7.18.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   registry.npmmirror.com/@babel/helper-environment-visitor/7.18.9:
     resolution: {integrity: sha512-3r/aACDJ3fhQ/EVgFy0hpj8oHyHpQc+LPtJoY9SzTThAsStm4Ptegq92vqKoE3vD706ZVFWITnMnxucw+S9Ipg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-environment-visitor/-/helper-environment-visitor-7.18.9.tgz}
     name: '@babel/helper-environment-visitor'
@@ -201,6 +222,15 @@ packages:
     resolution: {integrity: sha512-UlJQPkFqFULIcyW5sbzgbkxn2FKRgwWiRexcuaR8RNJRy8+LLveqPjwZV/bwrLZCN0eUHD/x8D0heK1ozuoo6Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-hoist-variables/-/helper-hoist-variables-7.18.6.tgz}
     name: '@babel/helper-hoist-variables'
     version: 7.18.6
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
+    dev: true
+
+  registry.npmmirror.com/@babel/helper-member-expression-to-functions/7.18.9:
+    resolution: {integrity: sha512-RxifAh2ZoVU67PyKIO4AMi1wTenGfMR/O/ae0CCRqwgBAt5v7xjdtRw7UoSbsreKrQn5t7r89eruK/9JjYHuDg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.18.9.tgz}
+    name: '@babel/helper-member-expression-to-functions'
+    version: 7.18.9
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
@@ -233,11 +263,35 @@ packages:
       - supports-color
     dev: true
 
+  registry.npmmirror.com/@babel/helper-optimise-call-expression/7.18.6:
+    resolution: {integrity: sha512-HP59oD9/fEHQkdcbgFCnbmgH5vIQTJbxh2yf+CdM89/glUNnuzr87Q8GIjGEnOktTROemO0Pe0iPAYbqZuOUiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-optimise-call-expression/-/helper-optimise-call-expression-7.18.6.tgz}
+    name: '@babel/helper-optimise-call-expression'
+    version: 7.18.6
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
+    dev: true
+
   registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9:
     resolution: {integrity: sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.18.9.tgz}
     name: '@babel/helper-plugin-utils'
     version: 7.18.9
     engines: {node: '>=6.9.0'}
+    dev: true
+
+  registry.npmmirror.com/@babel/helper-replace-supers/7.18.9:
+    resolution: {integrity: sha512-dNsWibVI4lNT6HiuOIBr1oyxo40HvIVmbwPUm3XZ7wMh4k2WxrxTqZwSqw/eEmXDS9np0ey5M2bz9tBmO9c+YQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/helper-replace-supers/-/helper-replace-supers-7.18.9.tgz}
+    name: '@babel/helper-replace-supers'
+    version: 7.18.9
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': registry.npmmirror.com/@babel/helper-environment-visitor/7.18.9
+      '@babel/helper-member-expression-to-functions': registry.npmmirror.com/@babel/helper-member-expression-to-functions/7.18.9
+      '@babel/helper-optimise-call-expression': registry.npmmirror.com/@babel/helper-optimise-call-expression/7.18.6
+      '@babel/traverse': registry.npmmirror.com/@babel/traverse/7.18.11
+      '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@babel/helper-simple-access/7.18.6:
@@ -313,6 +367,48 @@ packages:
       '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
     dev: true
 
+  registry.npmmirror.com/@babel/plugin-proposal-class-properties/7.18.6:
+    resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.18.6.tgz}
+    name: '@babel/plugin-proposal-class-properties'
+    version: 7.18.6
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-create-class-features-plugin': registry.npmmirror.com/@babel/helper-create-class-features-plugin/7.18.9
+      '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@babel/plugin-proposal-decorators/7.18.10:
+    resolution: {integrity: sha512-wdGTwWF5QtpTY/gbBtQLAiCnoxfD4qMbN87NYZle1dOZ9Os8Y6zXcKrIaOU8W+TIvFUWVGG9tUgNww3CjXRVVw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.18.10.tgz}
+    name: '@babel/plugin-proposal-decorators'
+    version: 7.18.10
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-create-class-features-plugin': registry.npmmirror.com/@babel/helper-create-class-features-plugin/7.18.9
+      '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+      '@babel/helper-replace-supers': registry.npmmirror.com/@babel/helper-replace-supers/7.18.9
+      '@babel/helper-split-export-declaration': registry.npmmirror.com/@babel/helper-split-export-declaration/7.18.6
+      '@babel/plugin-syntax-decorators': registry.npmmirror.com/@babel/plugin-syntax-decorators/7.18.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@babel/plugin-syntax-decorators/7.18.6:
+    resolution: {integrity: sha512-fqyLgjcxf/1yhyZ6A+yo1u9gJ7eleFQod2lkaUsF9DQ7sbbY3Ligym3L0+I2c0WmqNKDpoD9UTb1AKP3qRMOAQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.18.6.tgz}
+    name: '@babel/plugin-syntax-decorators'
+    version: 7.18.6
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+    dev: true
+
   registry.npmmirror.com/@babel/plugin-syntax-jsx/7.18.6_@babel+core@7.18.10:
     resolution: {integrity: sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.18.6.tgz}
     id: registry.npmmirror.com/@babel/plugin-syntax-jsx/7.18.6
@@ -324,6 +420,26 @@ packages:
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core/7.18.10
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+    dev: true
+
+  registry.npmmirror.com/@babel/plugin-transform-classes/7.18.9:
+    resolution: {integrity: sha512-EkRQxsxoytpTlKJmSPYrsOMjCILacAjtSVkd4gChEe2kXjFCun3yohhW5I7plXJhCemM0gKsaGMcO8tinvCA5g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-transform-classes/-/plugin-transform-classes-7.18.9.tgz}
+    name: '@babel/plugin-transform-classes'
+    version: 7.18.9
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-annotate-as-pure': registry.npmmirror.com/@babel/helper-annotate-as-pure/7.18.6
+      '@babel/helper-environment-visitor': registry.npmmirror.com/@babel/helper-environment-visitor/7.18.9
+      '@babel/helper-function-name': registry.npmmirror.com/@babel/helper-function-name/7.18.9
+      '@babel/helper-optimise-call-expression': registry.npmmirror.com/@babel/helper-optimise-call-expression/7.18.6
+      '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+      '@babel/helper-replace-supers': registry.npmmirror.com/@babel/helper-replace-supers/7.18.9
+      '@babel/helper-split-export-declaration': registry.npmmirror.com/@babel/helper-split-export-declaration/7.18.6
+      globals: registry.npmmirror.com/globals/11.12.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/@babel/plugin-transform-react-jsx-development/7.18.6_@babel+core@7.18.10:
@@ -382,6 +498,18 @@ packages:
       '@babel/types': registry.npmmirror.com/@babel/types/7.18.10
     dev: true
 
+  registry.npmmirror.com/@babel/plugin-transform-regenerator/7.18.6:
+    resolution: {integrity: sha512-poqRI2+qiSdeldcz4wTSTXBRryoq3Gc70ye7m7UD5Ww0nE29IXqMl6r7Nd15WBgRd74vloEMlShtH6CKxVzfmQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/plugin-transform-regenerator/-/plugin-transform-regenerator-7.18.6.tgz}
+    name: '@babel/plugin-transform-regenerator'
+    version: 7.18.6
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils/7.18.9
+      regenerator-transform: registry.npmmirror.com/regenerator-transform/0.15.0
+    dev: true
+
   registry.npmmirror.com/@babel/runtime/7.18.9:
     resolution: {integrity: sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/runtime/-/runtime-7.18.9.tgz}
     name: '@babel/runtime'
@@ -389,7 +517,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
-    dev: false
 
   registry.npmmirror.com/@babel/template/7.18.10:
     resolution: {integrity: sha512-TI+rCtooWHr3QJ27kJxfjutghu44DLnasDMwpDqCXVTal9RLp3RSYNh4NdBrRP2cQAoG9A8juOQl6P6oZG4JxA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/template/-/template-7.18.10.tgz}
@@ -647,6 +774,20 @@ packages:
     name: async-validator
     version: 4.2.5
     dev: false
+
+  registry.npmmirror.com/babel-preset-mobx/2.0.0:
+    resolution: {integrity: sha512-hde0Tcc8P4iij+jlc2ieO3B0RYgWczMhVMEF2i46TkqUBHw9oKOcF0PQ3TA62FRqhs8Td5cISGKoq7ziSXEYgA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/babel-preset-mobx/-/babel-preset-mobx-2.0.0.tgz}
+    name: babel-preset-mobx
+    version: 2.0.0
+    dependencies:
+      '@babel/plugin-proposal-class-properties': registry.npmmirror.com/@babel/plugin-proposal-class-properties/7.18.6
+      '@babel/plugin-proposal-decorators': registry.npmmirror.com/@babel/plugin-proposal-decorators/7.18.10
+      '@babel/plugin-transform-classes': registry.npmmirror.com/@babel/plugin-transform-classes/7.18.9
+      '@babel/plugin-transform-regenerator': registry.npmmirror.com/@babel/plugin-transform-regenerator/7.18.6
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+    dev: true
 
   registry.npmmirror.com/browserslist/4.21.3:
     resolution: {integrity: sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/browserslist/-/browserslist-4.21.3.tgz}
@@ -2028,7 +2169,14 @@ packages:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz}
     name: regenerator-runtime
     version: 0.13.9
-    dev: false
+
+  registry.npmmirror.com/regenerator-transform/0.15.0:
+    resolution: {integrity: sha512-LsrGtPmbYg19bcPHwdtmXwbW+TqNvtY4riE3P83foeHRroMbH6/2ddFBfab3t7kbzc7v7p4wbkIecHImqt0QNg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-transform/-/regenerator-transform-0.15.0.tgz}
+    name: regenerator-transform
+    version: 0.15.0
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.18.9
+    dev: true
 
   registry.npmmirror.com/resize-observer-polyfill/1.5.1:
     resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz}
