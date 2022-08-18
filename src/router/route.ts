@@ -6,6 +6,11 @@ const routers: router[] = [
         redirect: '/login'
     },
     {
+        path: '/error',
+        name: '/error',
+        component: lazy(() => import('../pages/error/error')),
+    },
+    {
         path: '/login',
         name: 'login',
         component: lazy(() => import('../pages/login/login')),

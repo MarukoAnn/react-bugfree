@@ -1,0 +1,29 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    // background: linear-gradient(162deg, #FFFFFF 0%, #FFE9CE 100%);
+    background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    .login-left {
+        width: 50vw;
+    }
+    .login-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .form-content {
+            width: 25vw;
+            height: 45vh;
+            // min-width: 200px;
+            background: #fff;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 20px;
+            // display: flex;
+            // align-items: center;
+            // flex-direction: row;
+        }
+    }
+    
+}

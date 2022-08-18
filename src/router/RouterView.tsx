@@ -1,6 +1,7 @@
 import { Routes, Navigate, Route } from "react-router-dom";
 import { Suspense, Fragment, useState, useEffect, } from "react";
 import Redirect from "./Redirect";
+import { Space, Spin } from "antd"
 
 const RouterView = (props: { route: any }) => {
   let { route } = props;
@@ -24,7 +25,7 @@ const RouterView = (props: { route: any }) => {
     );
   };
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={ <div><Spin size={'large'} tip="Loading..."></Spin></div>}>
        <Routes>
         {
             RouterList(route)
