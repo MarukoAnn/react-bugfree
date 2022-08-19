@@ -1,5 +1,5 @@
 import { Button, Checkbox, Form, Input } from "antd";
-import { UserInfo, Props } from '@/model/Login'
+import { Props } from '@/model/Login'
 const userInfoList = [
   {
     label: "用户名",
@@ -20,7 +20,7 @@ const userInfoList = [
     isrequired: false,
   },
 ];
-const LoginForm: React.FC<Props> = ({userInfo, success}: Props) => {
+const LoginForm: React.FC<Props> = ({userInfo, success}) => {
   const setFormItem = (type: string) => {
     let el = null;
     switch (type) {

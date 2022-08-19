@@ -158,7 +158,7 @@ class Snows {
     num: any;
     opt: SnowOptions;
     snowList: Snow[];
-    constructor(opt: SnowOptions) {
+    constructor(opt: SnowOptions = {isRain: false}) {
         this.num = opt.num || 100
         this.opt = opt
         this.snowList = []
