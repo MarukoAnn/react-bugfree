@@ -56,16 +56,24 @@ const LoginForm: React.FC<Props> = ({userInfo, success}) => {
           <Form.Item label={info.label} name={info.name}  key={index}>
             {setFormItem(info.type)}
           </Form.Item> :
-           <Form.Item name={info.name} valuePropName={info.type} key={index} wrapperCol={{  offset: 5, span: 4 }}>
+           <Form.Item name={info.name} valuePropName={info.type} key={index}  wrapperCol={{  offset: 5}}>
            {setFormItem(info.type)}
          </Form.Item>
         );
       })}
-      <Form.Item wrapperCol={{ offset: 5, span: 8 }}>
-        <Button type="primary" htmlType="submit" style={{width: '16vw'}}>
+        <Form.Item
+              label="  "
+              colon={false}
+          >
+              <Button type="primary" htmlType="submit" block>
+              登陆
+              </Button>
+          </Form.Item>
+      {/* <Form.Item wrapperCol={{  offset: 5}}>
+        <Button type="primary" htmlType="submit" block>
           登陆
         </Button>
-      </Form.Item>
+      </Form.Item> */}
     </Form>
   );
 };

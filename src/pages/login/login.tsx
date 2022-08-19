@@ -27,7 +27,9 @@ const Login: React.FC = () => {
     useMobxLoginStore.setToken(data);
   };
   const success = (userInfo: UserInfo): void => {
-    console.log(userInfo, 'userInfo')
+    fetch("http://www.baidu.com").then((res)=>{
+　　　　console.log(res);//是一个综合各种方法的对象，并不是请求的数据
+　　})
   }
 
   return (
@@ -35,24 +37,24 @@ const Login: React.FC = () => {
       <div
         className="login"
       >
-        <div className="login-left">
-
-        </div>
          {/* <div>
           <Button type="primary" onClick={() => setToken("123")}>
             修改token
           </Button>
         </div>
         <div>{useMobxLoginStore.token}</div> */}
-        <div className="login-right">
-          <div className="form-content">
-            <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
-              <h2>react管理平台</h2>
-              <h3>系统欢迎您!</h3>
-              <LoginForm userInfo={userInfo} success={success} />
-            </Space>
+         <div className="form-content">
+            {/* <Space direction="vertical" size="middle" style={{ display: 'flex' }}> */}
+            <div className="lf-title">
+                  <h2>react管理平台</h2>
+                  <h3>系统欢迎您!</h3>
+              </div>
+              {/* <h2>react管理平台</h2> */}
+              <div className="lf-content">
+                <LoginForm userInfo={userInfo} success={success} />
+              </div>
+            {/* </Space> */}
           </div>
-        </div>
        
       </div>
     </>
