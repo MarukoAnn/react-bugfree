@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 // import {}
 const useUtilsHook = () => {
-    const navigation = useNavigate();
+  const navigation = useNavigate()
 
-    return { navigation }
+  return { navigation }
 }
 
 export default useUtilsHook

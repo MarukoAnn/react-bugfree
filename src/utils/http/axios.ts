@@ -3,13 +3,13 @@ import axios, {
   AxiosInstance,
   AxiosPromise,
   AxiosResponse,
-  AxiosRequestConfig
+  AxiosRequestConfig,
 } from 'axios'
 import axiosRetry from 'axios-retry'
-import store from "@/store";
-const { useMobxLoginStore } = store;
+import store from '@/store'
+const { useMobxLoginStore } = store
 // import history from '@/router/history';
-import { customHistory } from "@/router/history";
+import { customHistory } from '@/router/history'
 // import useUitlsHook from '@/hooks/useUitlsHook'
 // const { navigation } = useUitlsHook();
 // const { navigation } = useUitlsHook();
@@ -32,7 +32,7 @@ class HttpService {
   constructor() {
     this.http = axios.create({
       // baseURL: authUtils.getBaseUrl(),
-      timeout: 600000
+      timeout: 600000,
     })
     // setToken(userStore.token) // 设置cookie
     // useMobxLoginStore.setToken(useMobxLoginStore.token) // 设置cookie
@@ -48,7 +48,7 @@ class HttpService {
           return true
         }
         return !error.response || error.response.status !== 401
-      }
+      },
     })
     this.addInterceptors()
   }
@@ -66,7 +66,7 @@ class HttpService {
       config.headers = {
         'Content-Type': 'application/json;charset=UTF-8', // 传参方式json
         // CookieJson: token || '', // 这里自定义配置，这里传的是token
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
       }
       console.log('getToken:', token)
       // 2、验证请求状态码
@@ -97,7 +97,9 @@ class HttpService {
     )
   }
 
-  private async handleErrorWrapper<T>(p: AxiosPromise): Promise<IDataWithError<T>> {
+  private async handleErrorWrapper<T>(
+    p: AxiosPromise
+  ): Promise<IDataWithError<T>> {
     return p
       .then((response) => {
         return response.data
@@ -116,7 +118,9 @@ class HttpService {
   }
 
   postDownload<T>(url: string, param: unknown) {
-    return this.handleErrorWrapper<T>(this.http.post(url, param, { responseType: 'arraybuffer' }))
+    return this.handleErrorWrapper<T>(
+      this.http.post(url, param, { responseType: 'arraybuffer' })
+    )
   }
 
   put<T>(url: string, param: unknown, config?: AxiosRequestConfig) {
@@ -124,7 +128,9 @@ class HttpService {
   }
 
   delete<T>(url: string, param: unknown, config?: AxiosRequestConfig) {
-    return this.handleErrorWrapper<T>(this.http.delete(url, { data: param, ...config }))
+    return this.handleErrorWrapper<T>(
+      this.http.delete(url, { data: param, ...config })
+    )
   }
 }
 

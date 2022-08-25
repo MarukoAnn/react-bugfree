@@ -1,10 +1,10 @@
 export interface UserInfo {
-    username: string;
-    password: string;
-    checked: boolean;
-  }
+  username: string
+  password: string
+  checked: boolean
+}
 
 export interface Props {
-    userInfo?: UserInfo;
-    success: (userInfo: UserInfo) => void;
+  userInfo?: UserInfo
+  success: (userInfo: UserInfo) => void
 }

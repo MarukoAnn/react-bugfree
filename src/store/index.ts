@@ -1,4 +1,4 @@
-import useMobxLoginStore from './login';
+import useMobxLoginStore from './login'
 export default {
-    useMobxLoginStore
+  useMobxLoginStore,
 }
