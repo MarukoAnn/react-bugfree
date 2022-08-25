@@ -7,6 +7,7 @@ import './login.scss';
 import LoginForm from './loginForm'
 import { useState } from "react";
 import { UserInfo } from '@/model/Login'
+import { loginApi } from '@/apis/login'
 // const useMobxLoginStore1 = new useMobxLoginStore();
 const Login: React.FC = () => {
   const [userInfo, setUserInfo] = useState<UserInfo>({
@@ -27,9 +28,13 @@ const Login: React.FC = () => {
     useMobxLoginStore.setToken(data);
   };
   const success = (userInfo: UserInfo): void => {
-    fetch("http://www.baidu.com").then((res)=>{
-　　　　console.log(res);//是一个综合各种方法的对象，并不是请求的数据
-　　})
+    loginApi(userInfo).then(res => {
+      console.log(res);
+    })
+//     fetch("http://www.baidu.com").then((res)=>{
+// 　　　　console.log(res);//是一个综合各种方法的对象，并不是请求的数据
+// 　　})
+
   }
 
   return (

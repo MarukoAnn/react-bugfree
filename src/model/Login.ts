@@ -5,6 +5,6 @@ export interface UserInfo {
   }
 
 export interface Props {
-    userInfo: UserInfo;
+    userInfo?: UserInfo;
     success: (userInfo: UserInfo) => void;
 }

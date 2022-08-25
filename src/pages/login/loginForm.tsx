@@ -20,7 +20,7 @@ const userInfoList = [
     isrequired: false,
   },
 ];
-const LoginForm: React.FC<Props> = ({userInfo, success}) => {
+const LoginForm: React.FC<Props> = ({success}) => {
   const setFormItem = (type: string) => {
     let el = null;
     switch (type) {
