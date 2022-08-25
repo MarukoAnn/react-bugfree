@@ -1,5 +1,12 @@
 ### git 提交规范
 
+```
+git commit -m ":bug: fix: 修复问题"
+
+此处的 :bug: 是Gitmoji上对应的提交icon
+fix 是提交的类型
+```
+
 #### 提交类型 type
 
 - feat: 新功能
