@@ -17,6 +17,9 @@ class UseMobxLoginStore {
     setToken(option: string): void {
         this.token = option
     }
+    getToken(): string {
+        return this.token
+    }
 }
 // 导出这个实例
 let useMobxLoginStore = new UseMobxLoginStore();

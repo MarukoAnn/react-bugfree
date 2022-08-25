@@ -8,8 +8,10 @@ import LoginForm from './loginForm'
 import { useState } from "react";
 import { UserInfo } from '@/model/Login'
 import { loginApi } from '@/apis/login'
+import useUitlsHook from '@/hooks/useUitlsHook'
 // const useMobxLoginStore1 = new useMobxLoginStore();
 const Login: React.FC = () => {
+  const { navigation } = useUitlsHook();
   const [userInfo, setUserInfo] = useState<UserInfo>({
     username: '',
     password: '',
@@ -28,8 +30,13 @@ const Login: React.FC = () => {
     useMobxLoginStore.setToken(data);
   };
   const success = (userInfo: UserInfo): void => {
-    loginApi(userInfo).then(res => {
-      console.log(res);
+    loginApi(userInfo).then(({code, data: {token}, msg}) => {
+      if(code !== 200){
+        return;
+      }
+      useMobxLoginStore.setToken(token);
+      console.log(useMobxLoginStore.getToken(), 'token');
+      navigation('/layout/home');
     })
 //     fetch("http://www.baidu.com").then((res)=>{
 // 　　　　console.log(res);//是一个综合各种方法的对象，并不是请求的数据

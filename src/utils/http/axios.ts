@@ -6,8 +6,14 @@ import axios, {
   AxiosRequestConfig
 } from 'axios'
 import axiosRetry from 'axios-retry'
+import store from "@/store";
+const { useMobxLoginStore } = store;
+// import history from '@/router/history';
+import { customHistory } from "@/router/history";
+// import useUitlsHook from '@/hooks/useUitlsHook'
+// const { navigation } = useUitlsHook();
+// const { navigation } = useUitlsHook();
 // import authUtils from '@/utils/auth'
-import route from '@/router/index'
 // import { useUserStore } from '@/store/module/user'
 // import { setToken, getToken } from '@/utils/tokenKey'
 
@@ -29,6 +35,7 @@ class HttpService {
       timeout: 600000
     })
     // setToken(userStore.token) // 设置cookie
+    // useMobxLoginStore.setToken(useMobxLoginStore.token) // 设置cookie
     axiosRetry(this.http, {
       retries: 3, // 失败重试的次数
       shouldResetTimeout: true, // 定义是否在重试之间重置超时
@@ -51,7 +58,7 @@ class HttpService {
     this.http.interceptors.request.use((config: any) => {
       // 1、添加token
       // console.log(userStore.token)
-      // const { token } = userStore
+      const { token } = useMobxLoginStore
       //  获取token后做啥
       // if (token) {
 
@@ -59,19 +66,16 @@ class HttpService {
       config.headers = {
         'Content-Type': 'application/json;charset=UTF-8', // 传参方式json
         // CookieJson: token || '', // 这里自定义配置，这里传的是token
-        // Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`
       }
-      // setToken(token)
-      // console.log('getToken:', getToken())
+      console.log('getToken:', token)
       // 2、验证请求状态码
-      // eslint-disable-next-line no-param-reassign
       config.validateStatus = (status: number) => {
         switch (status) {
           case 401:
             // const instance = alert('用户信息过期, 请重新登陆')
             setTimeout(() => {
-              //   instance.close()
-              // route.push('/login')
+              customHistory.push('/login')
             }, 1000)
             break
           default:
