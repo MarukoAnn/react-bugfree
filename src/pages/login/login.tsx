@@ -58,11 +58,9 @@ const Login: React.FC = () => {
             <h2>react管理平台</h2>
             <h3>系统欢迎您!</h3>
           </div>
-          {/* <h2>react管理平台</h2> */}
           <div className="lf-content">
             <LoginForm userInfo={userInfo} success={success} />
           </div>
-          {/* </Space> */}
         </div>
       </div>
     </>
