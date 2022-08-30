@@ -1,0 +1,10 @@
+{
+  "login": {
+    "title": "react管理平台",
+    "subtitle": "系统欢迎您",
+    "username": "用户名",
+    "password": "密码",
+    "remember": "记住我",
+    "btnname": "登陆"
+  }
+}

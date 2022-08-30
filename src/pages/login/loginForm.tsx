@@ -1,5 +1,6 @@
 import { Button, Checkbox, Form, Input } from 'antd'
 import { Props } from '@/model/Login'
+import { useTranslation, Trans } from 'react-i18next'
 const userInfoList = [
   {
     label: '用户名',
@@ -21,6 +22,7 @@ const userInfoList = [
   },
 ]
 const LoginForm: React.FC<Props> = ({ success }) => {
+  const { t } = useTranslation()
   const setFormItem = (type: string) => {
     let el = null
     switch (type) {
@@ -31,7 +33,7 @@ const LoginForm: React.FC<Props> = ({ success }) => {
         el = <Input.Password />
         break
       case 'checked':
-        el = <Checkbox>记住我</Checkbox>
+        el = <Checkbox>{t('login.remember')}</Checkbox>
         break
       default:
         break
@@ -52,7 +54,11 @@ const LoginForm: React.FC<Props> = ({ success }) => {
     >
       {userInfoList.map((info, index) => {
         return info.type != 'checked' ? (
-          <Form.Item label={info.label} name={info.name} key={index}>
+          <Form.Item
+            label={t(`login.${info.name}`)}
+            name={info.name}
+            key={index}
+          >
             {setFormItem(info.type)}
           </Form.Item>
         ) : (
@@ -68,7 +74,7 @@ const LoginForm: React.FC<Props> = ({ success }) => {
       })}
       <Form.Item label="  " colon={false}>
         <Button type="primary" htmlType="submit" block>
-          登陆
+          {t('login.btnname')}
         </Button>
       </Form.Item>
       {/* <Form.Item wrapperCol={{  offset: 5}}>

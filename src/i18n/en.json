@@ -1,0 +1,10 @@
+{
+  "login": {
+    "title": "react admin",
+    "subtitle": "Welcome to the system",
+    "username": "username",
+    "password": "password",
+    "remember": "remeber Me",
+    "btnname": "Login"
+  }
+}
