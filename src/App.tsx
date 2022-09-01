@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ViewRouter from './router/index'
-import { unstable_HistoryRouter as Router } from 'react-router-dom'
+import { unstable_HistoryRouter as Router, HashRouter } from 'react-router-dom'
 import { customHistory } from '@/router/history'
 function App() {
   return (

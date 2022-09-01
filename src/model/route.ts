@@ -7,6 +7,6 @@ export interface router {
   redirect?: string
 }
 export interface metaInfo {
-  title: string
-  icon: string
+  title?: string
+  icon?: string
 }
